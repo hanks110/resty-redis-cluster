@@ -47,7 +47,8 @@ https://github.com/cuiweixie/lua-resty-redis-cluster. Thanks for this is a good 
    #include </usr/local/openresty/luajit/include/luajit-2.1/lua.h>
    #include </usr/local/openresty/luajit/include/luajit-2.1/lualib.h>
    #include </usr/local/openresty/luajit/include/luajit-2.1/lauxlib.h>
-   If the server has multiple luajit environment, recommended to use the openresty luajit.
+   
+    If the server has multiple luajit environment, recommended to use the openresty luajit.
 
 2. please add redis_slot.so and rediscluster.lua at lualib, Also please add library:lua-resty-redis and lua-resty-lock
    nginx.conf like:
