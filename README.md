@@ -32,6 +32,7 @@ https://github.com/cuiweixie/lua-resty-redis-cluster. Thanks for this is a good 
 ### installation
 
 1. please compile and generate redis_slot.so from redis_slot.c (can done by gcc)
+   gcc redis_slot.c -fPIC -shared -o redis_slot.so
 
 2. please add redis_slot.so and rediscluster.lua at lualib, Also please add library:lua-resty-redis and lua-resty-lock
    nginx.conf like:
