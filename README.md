@@ -38,17 +38,24 @@ https://github.com/cuiweixie/lua-resty-redis-cluster. Thanks for this is a good 
    Note:
 
    If prompted lua.h lualib.h lauxlib.h does not exist when compiling, modify the crc16.c include path to absolute path.
+   
    -- modify before
+   
    #include <lua.h>
+   
    #include <lualib.h>
+   
    #include <lauxlib.h>
 
    -- modify after
+   
    #include </usr/local/openresty/luajit/include/luajit-2.1/lua.h>
+   
    #include </usr/local/openresty/luajit/include/luajit-2.1/lualib.h>
+   
    #include </usr/local/openresty/luajit/include/luajit-2.1/lauxlib.h>
    
-    If the server has multiple luajit environment, recommended to use the openresty luajit.
+   If the server has multiple luajit environment, recommended to use the openresty luajit.
 
 2. please add redis_slot.so and rediscluster.lua at lualib, Also please add library:lua-resty-redis and lua-resty-lock
    nginx.conf like:
